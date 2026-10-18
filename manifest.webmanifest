@@ -1,0 +1,9 @@
+{
+  "name": "AUREN KA",
+  "short_name": "AUREN",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#100c10",
+  "theme_color": "#120d11",
+  "description": "Asistente personal AUREN KA"
+}

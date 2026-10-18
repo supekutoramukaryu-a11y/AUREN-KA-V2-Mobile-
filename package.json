@@ -1,0 +1,11 @@
+{
+  "name": "auren-ka-v2",
+  "version": "2.0.0",
+  "private": true,
+  "description": "AUREN KA v2 - asistente web con chat IA mediante servidor protegido",
+  "type": "module",
+  "scripts": { "start": "node server.js" },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

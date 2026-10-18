@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#120d11">
+  <meta name="description" content="AUREN KA: asistente personal de voz y texto.">
+  <title>AUREN KA · v2.0</title>
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="top">
+      <div class="brand">
+        <div class="mark" aria-hidden="true">K<span>◇</span>A</div>
+        <div><h1>AUREN</h1><p>KA · PERSONAL ASSISTANT</p></div>
+      </div>
+      <span class="version">V 2.0</span>
+    </header>
+
+    <section class="hero">
+      <div class="orb"><span>◇</span></div>
+      <p class="eyebrow">SISTEMA PERSONAL</p>
+      <h2>Estoy aquí, ¿en qué te ayudo?</h2>
+      <p class="sub">Habla o escribe. La inteligencia artificial se activará cuando se configure el servidor.</p>
+      <div class="status" id="status"><i></i><span>Comprobando conexión…</span></div>
+    </section>
+
+    <section class="profile panel">
+      <div><p class="eyebrow">PERFIL LOCAL</p><h3 id="profileName">Invitado</h3><p class="muted" id="profileInfo">Este dispositivo no ha verificado al creador.</p></div>
+      <button class="secondary" id="profileBtn">Identificarme</button>
+    </section>
+
+    <section class="chat panel" aria-label="Conversación">
+      <div class="chathead"><div><p class="eyebrow">CONVERSACIÓN</p><h3>AUREN Intelligence</h3></div><button id="clearBtn" class="iconbtn" aria-label="Borrar conversación" title="Borrar conversación">↺</button></div>
+      <div id="messages" class="messages" aria-live="polite">
+        <div class="bubble assistant"><b>AUREN</b><p>Hola. Soy AUREN. Puedes escribirme o probar la voz. Para responder preguntas abiertas, el servidor debe tener una IA configurada.</p></div>
+      </div>
+      <form id="chatForm">
+        <textarea id="prompt" rows="1" maxlength="4000" placeholder="Escribe tu mensaje…" aria-label="Mensaje"></textarea>
+        <button id="sendBtn" type="submit" aria-label="Enviar">↑</button>
+      </form>
+      <div class="chattools"><button class="secondary" id="voiceBtn">🎙 Hablar</button><button class="secondary" id="speakBtn">🔊 Leer última respuesta</button></div>
+      <p class="fine">No introduzcas contraseñas ni datos privados. El chat se mantiene solo en esta sesión.</p>
+    </section>
+
+    <section class="shortcuts">
+      <p class="eyebrow">ACCESOS RÁPIDOS</p>
+      <div class="grid">
+        <a href="https://www.google.com/" target="_blank" rel="noopener">⌕ <span>Google</span></a>
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener">▶ <span>YouTube</span></a>
+        <a href="https://open.spotify.com/" target="_blank" rel="noopener">♫ <span>Spotify</span></a>
+        <a href="https://web.whatsapp.com/" target="_blank" rel="noopener">◉ <span>WhatsApp Web</span></a>
+      </div>
+    </section>
+    <footer>AUREN KA · Construido para crecer contigo</footer>
+  </main>
+  <dialog id="profileDialog">
+    <form method="dialog" id="profileForm">
+      <p class="eyebrow">IDENTIDAD</p><h2>¿Cómo quieres aparecer?</h2>
+      <p class="muted">El nombre de perfil no verifica por sí solo que seas el creador.</p>
+      <label for="displayName">Nombre o alias</label>
+      <input id="displayName" maxlength="40" placeholder="Ej. Kaze" autocomplete="nickname">
+      <label for="creatorCode">Código de creador (opcional)</label>
+      <input id="creatorCode" type="password" maxlength="100" placeholder="Configurable desde el servidor" autocomplete="off">
+      <p class="fine">La verificación real aún debe configurarse en el servidor; no pongas aquí contraseñas que uses en otros sitios.</p>
+      <div class="dialogactions"><button class="secondary" value="cancel">Cancelar</button><button id="saveProfile" class="primary" value="save">Guardar perfil</button></div>
+    </form>
+  </dialog>
+  <script src="/app.js" defer></script>
+</body>
+</html>
